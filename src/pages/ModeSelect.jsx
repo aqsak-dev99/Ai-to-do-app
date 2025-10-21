@@ -1,7 +1,5 @@
-// src/pages/ModeSelect.jsx
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import AppIcon from '../logo/app-icon.png';
 
 export default function ModeSelect() {
   const navigate = useNavigate();
@@ -20,11 +18,10 @@ export default function ModeSelect() {
 
   return (
     <div className="mode-container">
-      <img src={AppIcon} alt="AI Todo" className="logo-sm mb-6 animate-float" />
+      <img src="/logo/app-icon.png" alt="AI Todo" className="logo-sm mb-6 animate-float" />
       <h2 style={{ color: '#9C88FF', fontSize: '2rem', marginBottom: '2.5rem', fontWeight: 700 }}>
         Choose Your Mode
       </h2>
-
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
         <div onClick={startDemo} className="mode-card glass-neon animate-slideUp" style={{ animationDelay: '0.3s' }}>
           <div className="icon">
@@ -35,7 +32,6 @@ export default function ModeSelect() {
           <h3>Demo Mode</h3>
           <p>Try all features with mock AI</p>
         </div>
-
         <div onClick={startAI} className="mode-card glass-neon animate-slideUp" style={{ animationDelay: '0.5s' }}>
           <div className="icon">
             <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor">
