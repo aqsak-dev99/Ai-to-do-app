@@ -10,7 +10,7 @@ import './style.css';
 const root = createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Ai-to-do-app">
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/mode" element={<ModeSelect />} />
