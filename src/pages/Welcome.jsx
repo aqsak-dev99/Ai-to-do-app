@@ -18,10 +18,10 @@ export default function Welcome() {
         <p className="welcome-subtitle">AI-Powered Todo App</p>
       </div>
       <div className="welcome-icon">
-        <img src="/logo/app-icon.png" alt="AI Todo App" className="logo-lg" />
+        <img src="/Ai-to-do-app/logo/app-icon.png" alt="AI Todo App" className="logo-lg" />
       </div>
       <footer className="welcome-footer">
-        <img src="/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
+        <img src="/Ai-to-do-app/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
         <div className="footer-links">
           <a href="https://github.com/aqsakhan" target="_blank" rel="noopener noreferrer">GitHub</a>
           <span>•</span>

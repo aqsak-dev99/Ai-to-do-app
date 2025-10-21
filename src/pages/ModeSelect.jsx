@@ -18,7 +18,7 @@ export default function ModeSelect() {
 
   return (
     <div className="mode-container">
-      <img src="/logo/app-icon.png" alt="AI Todo" className="logo-sm mb-6 animate-float" />
+      <img src="/Ai-to-do-app/logo/app-icon.png" alt="AI Todo" className="logo-sm mb-6 animate-float" />
       <h2 style={{ color: '#9C88FF', fontSize: '2rem', marginBottom: '2.5rem', fontWeight: 700 }}>
         Choose Your Mode
       </h2>
