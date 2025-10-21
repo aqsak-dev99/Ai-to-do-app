@@ -1,4 +1,3 @@
-// src/App.jsx
 import { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { DndProvider, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
@@ -10,8 +9,6 @@ import { format } from 'date-fns';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import Settings from './components/Settings';
-import AppIcon from './logo/app-icon.png';
-import MyLogo from './logo/logo.png';
 
 const ItemType = 'TODO';
 
@@ -98,12 +95,10 @@ export default function App() {
     document.body.classList.toggle('light', !isDarkMode);
   }, [todos, points, streak, lastCompletionDate, isDarkMode, mode, apiKey]);
 
-// Focus input on mount
   useLayoutEffect(() => {
     inputRef.current?.focus();
   }, []);
 
-  // Set AI tip after mount
   useEffect(() => {
     const tips = [
       "Break big tasks into 15-minute chunks for better focus.",
@@ -173,11 +168,9 @@ export default function App() {
       <div className="app-container">
         <ToastContainer position="top-right" theme={isDarkMode ? 'dark' : 'light'} />
         <div className="app-card glass">
-
-          {/* HEADER */}
           <div className="header">
             <div className="header-left">
-              <img src={AppIcon} alt="AI Todo" className="logo-sm" />
+              <img src="/logo/app-icon.png" alt="AI Todo" className="logo-sm" />
               <div>
                 <h1>AI Todo</h1>
                 <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Smart Task Manager</p>
@@ -195,8 +188,6 @@ export default function App() {
               </button>
             </div>
           </div>
-
-          {/* STATS */}
           <div className="stats-grid">
             <div className="stat-item">
               <div style={{ width: 50, height: 50, margin: '0 auto' }}>
@@ -217,13 +208,9 @@ export default function App() {
               <div className="stat-label">Done</div>
             </div>
           </div>
-
-          {/* AI TIP */}
           <div className="ai-tip">
             {aiTip}
           </div>
-
-          {/* INPUT */}
           <div className="input-row">
             <input ref={inputRef} value={newTodo} onChange={e => setNewTodo(e.target.value)} onKeyDown={e => e.key === 'Enter' && addTodo()} placeholder="New task..." />
             <input value={note} onChange={e => setNote(e.target.value)} placeholder="Note" />
@@ -236,29 +223,21 @@ export default function App() {
             <input type="date" value={dueDate} onChange={e => setDueDate(e.target.value)} />
             <button onClick={addTodo}>Add</button>
           </div>
-
-          {/* SEARCH */}
           <input value={search} onChange={e => setSearch(e.target.value)} placeholder="Search tasks..." style={{ width: '100%', padding: '0.9rem', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(255,255,255,0.1)', color: '#e0e7ff', marginBottom: '1rem' }} />
-
-          {/* FILTERS */}
           <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
             {['All', 'Pending', 'Completed', 'Personal', 'Work', 'Study'].map(f => (
               <button key={f} onClick={() => setFilter(f)} style={{ padding: '0.6rem 1.2rem', background: filter === f ? '#9C88FF' : 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '12px', fontSize: '0.9rem' }}>
-                {f}
-              </button>
+              {f}
+            </button>
             ))}
           </div>
-
-          {/* LIST */}
           <ul className="todo-list">
             {filtered.map((todo, i) => (
               <TodoItem key={todo.id} todo={todo} index={i} toggleTodo={toggleTodo} deleteTodo={deleteTodo} moveTodo={moveTodo} editTodo={editTodo} />
             ))}
           </ul>
-
-          {/* FOOTER */}
           <footer className="footer">
-            <img src={MyLogo} alt="Aqsa Khan" className="logo-sm" />
+            <img src="/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
             <div>
               <p style={{ margin: '0.5rem 0', fontSize: '0.9rem' }}>
                 Made by <strong>Aqsa-dev99</strong>
@@ -273,7 +252,6 @@ export default function App() {
             </div>
           </footer>
         </div>
-
         {showSettings && (
           <Settings
             isDarkMode={isDarkMode}

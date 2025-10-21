@@ -1,6 +1,4 @@
 // src/components/Settings.jsx
-import AppIcon from '../logo/app-icon.png';
-
 export default function Settings({
   isDarkMode, toggleDarkMode, mode, setMode, apiKey, setApiKey,
   clearAllTodos, onClose
@@ -14,14 +12,8 @@ export default function Settings({
         className="glass glass-neon p-6 w-96 max-w-full mx-4"
         onClick={e => e.stopPropagation()}
       >
-        {/* App Icon + Title */}
+        {/* Title */}
         <div className="text-center mb-6">
-          <img
-            src={AppIcon}
-            alt="AI Todo"
-            className="logo-sm mx-auto animate-float"
-            style={{ boxShadow: '0 0 25px rgba(156, 136, 255, 0.6)' }}
-          />
           <h3 className="text-xl font-bold mt-3" style={{ color: '#9C88FF' }}>
             Settings
           </h3>
@@ -68,7 +60,7 @@ export default function Settings({
           </select>
         </div>
 
-        {/* API Key Input — EXACTLY like "New task..." */}
+        {/* API Key Input */}
         {mode === 'api' && (
           <div className="mb-5">
             <label className="block mb-2 font-medium text-sm">OpenAI API Key</label>
@@ -99,9 +91,8 @@ export default function Settings({
           </div>
         )}
 
-        {/* Buttons — EXACT CLONE OF "ADD" BUTTON */}
+        {/* Buttons */}
         <div className="flex flex-col gap-3 mt-6">
-          {/* Clear All Tasks — Red Version */}
           <button
             onClick={clearAllTodos}
             className="w-full py-3 rounded-lg font-medium text-white transition-all duration-300"
@@ -124,8 +115,6 @@ export default function Settings({
           >
             Clear All Tasks
           </button>
-
-          {/* Close — Purple Version (like "Add") */}
           <button
             onClick={onClose}
             className="w-full py-3 rounded-lg font-medium text-white transition-all duration-300"
