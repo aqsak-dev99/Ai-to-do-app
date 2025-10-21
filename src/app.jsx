@@ -170,7 +170,7 @@ export default function App() {
         <div className="app-card glass">
           <div className="header">
             <div className="header-left">
-              <img src="/logo/app-icon.png" alt="AI Todo" className="logo-sm" />
+              <img src="/Ai-to-do-app/logo/app-icon.png" alt="AI Todo" className="logo-sm" />
               <div>
                 <h1>AI Todo</h1>
                 <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Smart Task Manager</p>
@@ -227,8 +227,8 @@ export default function App() {
           <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
             {['All', 'Pending', 'Completed', 'Personal', 'Work', 'Study'].map(f => (
               <button key={f} onClick={() => setFilter(f)} style={{ padding: '0.6rem 1.2rem', background: filter === f ? '#9C88FF' : 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)', borderRadius: '12px', fontSize: '0.9rem' }}>
-              {f}
-            </button>
+                {f}
+              </button>
             ))}
           </div>
           <ul className="todo-list">
@@ -237,7 +237,7 @@ export default function App() {
             ))}
           </ul>
           <footer className="footer">
-            <img src="/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
+            <img src="/Ai-to-do-app/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
             <div>
               <p style={{ margin: '0.5rem 0', fontSize: '0.9rem' }}>
                 Made by <strong>Aqsa-dev99</strong>
