@@ -1,8 +1,5 @@
-// src/pages/Welcome.jsx
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import AppIcon from '../logo/app-icon.png';
-import MyLogo from '../logo/logo.png';
 
 export default function Welcome() {
   const navigate = useNavigate();
@@ -16,20 +13,15 @@ export default function Welcome() {
 
   return (
     <div className="welcome-container">
-      {/* TOP: Welcome Text */}
       <div className="welcome-header animate-fade" style={{ animationDelay: '0.4s' }}>
         <h1 className="welcome-title">Welcome</h1>
         <p className="welcome-subtitle">AI-Powered Todo App</p>
       </div>
-
-      {/* CENTER: App Icon */}
       <div className="welcome-icon">
-        <img src={AppIcon} alt="AI Todo App" className="logo-lg" />
+        <img src="/logo/app-icon.png" alt="AI Todo App" className="logo-lg" />
       </div>
-
-      {/* FOOTER: Your Brand */}
       <footer className="welcome-footer">
-        <img src={MyLogo} alt="Aqsa Khan" className="logo-sm" />
+        <img src="/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
         <div className="footer-links">
           <a href="https://github.com/aqsakhan" target="_blank" rel="noopener noreferrer">GitHub</a>
           <span>•</span>
