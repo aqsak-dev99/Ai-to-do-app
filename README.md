@@ -92,5 +92,4 @@ Now open your browser and visit ➡️ **[http://localhost:5173](http://localhos
 
 
 
-Would you like me to add a preview screenshot section (with an image or placeholder like `/public/preview.png`) right under the “Overview”? It makes your 
 
