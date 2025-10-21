@@ -1,65 +1,96 @@
-AI Todo – Smart Task Manager
+ 🌟 AI Todo – Smart Task Manager  
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blueviolet?style=for-the-badge)](https://aqsak-dev99.github.io/Ai-to-do-app/)
+![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
+![Vite](https://img.shields.io/badge/Vite-Build-yellow?style=for-the-badge&logo=vite)
+![Status](https://img.shields.io/badge/Status-Live%20Now-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 
-A futuristic, AI-powered todo app featuring a glassmorphic UI, neon violet glow, smooth animations, and confetti celebrations on task completion. Designed for productivity and to shine in your portfolio.
-Live Demo 
-Table of Contents
 
-Features
-Tech Stack
-How to Run Locally
-Demo Mode vs AI Mode
-Made With
+ ✨ Overview
+A futuristic, AI-powered To-Do App featuring a glassmorphic UI, neon violet glow, smooth animations, and confetti celebrations on task completion.  
+Designed to boost productivity and shine beautifully in your portfolio.  
 
-Features
+🔗 [👉 Live Demo](https://aqsak-dev99.github.io/Ai-to-do-app/)  
 
-Glassmorphic UI with neon gradients for a sleek, modern aesthetic
-Dark/Light Mode Toggle for user preference
-Drag & Drop task reordering with React DnD
-AI Suggestions (Demo mode or real OpenAI integration via API key)
-Streak & XP System to gamify productivity
-Priority, Category, Due Date for robust task management
-Confetti Celebration on task completion for a rewarding experience
-Fully Responsive design for all devices
-LocalStorage Persistence to save tasks
-Personal Branding with customizable logo in footer
 
-Tech Stack
 
-React 18 + Vite for fast, modern development
-JSX for declarative UI components
-React DnD for smooth drag-and-drop functionality
-Canvas Confetti for celebratory effects
-React Circular Progressbar for dynamic stats visualization
-Pure CSS (Tailwind-free) with glassmorphism and animations
-LocalStorage for persistent data storage
-OpenAI API (optional) for AI-powered suggestions
+ 🧭 Table of Contents
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [How to Run Locally](#-how-to-run-locally)
+- [Demo Mode vs AI Mode](#-demo-mode-vs-ai-mode)
+- [Made With](#-made-with)
 
-How to Run Locally
 
-Clone the repositorygit clone https://github.com/aqsak-dev99/Ai-to-do-app.git
+
+ ⚡ Features
+ 🌌 Glassmorphic UI with neon gradients for a sleek, modern aesthetic  
+ 🌗 Dark/Light Mode Toggle for user preference  
+ 🖱 Drag & Drop task reordering using React DnD  
+ 🤖 AI Suggestions – Demo mode or real OpenAI integration via API key  
+ 🔥 Streak & XP System to gamify productivity  
+ 🗂 Priority, Category, Due Date for robust task management  
+ 🎉 Confetti Celebration on task completion for a rewarding experience  
+ 📱 Fully Responsive design for all devices  
+ 💾 LocalStorage Persistence to save tasks  
+ 💖 Personal Branding with customizable logo in footer  
+
+
+
+ 🧰 Tech Stack
+ ⚛️ React 18 + Vite — Fast and modern web development  
+ 🧩 JSX — Declarative UI components  
+ 🧲 React DnD — Drag-and-drop functionality  
+ 🎇 Canvas Confetti — Celebration effects  
+ 📊 React Circular Progressbar — Dynamic productivity stats  
+ 🎨 Pure CSS (Tailwind-free) — Glassmorphism + animations  
+ 💾 LocalStorage — Persistent task data  
+ 🤖 OpenAI API (optional) — AI-powered suggestions  
+
+
+
+💻 How to Run Locally
+
+-bash
+- Clone the repository
+git clone https://github.com/aqsak-dev99/Ai-to-do-app.git
 cd Ai-to-do-app
 
+- Install dependencies
+npm install
 
-Install dependenciesnpm install
+- Start the development server
+npm run dev
 
 
-Start the development servernpm run dev
-
-
-Open in browserNavigate to http://localhost:5173
-
-Demo Mode vs AI Mode
-
-Demo Mode: Pre-written AI suggestions (no API key required)
-AI Mode: Enable real AI suggestions by adding your OpenAI API key in the Settings menu
-Obtain your API key at platform.openai.com
+Now open your browser and visit ➡️ **[http://localhost:5173](http://localhost:5173)**
 
 
 
-Made With
+ 🧠 Demo Mode vs AI Mode
 
-React – UI framework
-Vite – Lightning-fast build tool
-Canvas Confetti – Fun task completion effects
-Love & Neon – Crafted by Aqsa-dev99
+ 🧩 Demo Mode: Uses pre-written AI suggestions (no API key required)
+ 🔑 AI Mode: Add your OpenAI API key in the Settings Menu for live AI responses
+  Get your API key from 👉 [platform.openai.com](https://platform.openai.com/)
+
+
+
+ 🪄 Made With
+
+ ⚛️ [React](https://reactjs.org/) – UI Framework
+ ⚡ [Vite](https://vitejs.dev/) – Lightning-fast build tool
+ 🎉 [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti) – Fun task completion effects
+ 💜 Love & Neon – Crafted by [@aqsak-dev99](https://github.com/aqsak-dev99)
+
+
+
+⭐ If you like this project, don’t forget to give it a star on GitHub!
+
+
+
+
+
+Would you like me to add a preview screenshot section (with an image or placeholder like `/public/preview.png`) right under the “Overview”? It makes your 
+
