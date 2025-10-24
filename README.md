@@ -22,13 +22,13 @@ Whether you’re a developer looking to showcase front-end skills, a productivit
 ScreenShots:
 
 
-<img width="1280" height="649" alt="app ss" src="https://github.com/user-attachments/assets/a0f89eb8-b107-46a0-b686-b24eabda1cfd" />
+<img width="800" height="450" alt="app ss" src="https://github.com/user-attachments/assets/a0f89eb8-b107-46a0-b686-b24eabda1cfd" />
 
 
-<img width="1272" height="735" alt="app ss2" src="https://github.com/user-attachments/assets/ddc384dc-b4d7-477d-a283-54ca6ec4c471" />
+<img width="800" height="450" alt="app ss2" src="https://github.com/user-attachments/assets/ddc384dc-b4d7-477d-a283-54ca6ec4c471" />
 
 
-<img width="1257" height="738" alt="app ss3" src="https://github.com/user-attachments/assets/80928989-dc79-4b0f-8888-5594a40c4183" />
+<img width="800" height="450" alt="app ss3" src="https://github.com/user-attachments/assets/80928989-dc79-4b0f-8888-5594a40c4183" />
 
 
 
