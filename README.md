@@ -19,6 +19,23 @@ Whether you’re a developer looking to showcase front-end skills, a productivit
 🔗 [👉 Live Demo](https://aqsak-dev99.github.io/Ai-to-do-app/)  
 
 
+🧩 App Preview:
+
+
+
+
+
+https://github.com/user-attachments/assets/47844cf8-8159-417c-8d6c-21dd03b822e6
+
+
+
+
+
+
+
+
+
+
 ScreenShots:
 
 
