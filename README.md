@@ -1,6 +1,5 @@
 # 🌟 AI Todo – Smart Task Manager
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blueviolet?style=for-the-badge)](https://ai-todo-app-peach.vercel.app/mode)
 ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-Build-yellow?style=for-the-badge&logo=vite)
 ![Groq](https://img.shields.io/badge/AI-Groq-orange?style=for-the-badge)
@@ -8,7 +7,7 @@
 
 A glassmorphic task manager with **real AI suggestions**, gamified progress and drag-and-drop planning.
 
-🔗 **Live demo:** [YOUR-VERCEL-LINK](YOUR-VERCEL-LINK)
+🔗 **Live demo:** [YOUR-VERCEL-LINK](https://ai-todo-app-peach.vercel.app/mode)
 
 ---
 
