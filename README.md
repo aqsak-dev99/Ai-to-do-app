@@ -1,145 +1,127 @@
- 🌟 AI Todo – Smart Task Manager  
+# 🌟 AI Todo – Smart Task Manager
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blueviolet?style=for-the-badge)](https://aqsak-dev99.github.io/Ai-to-do-app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Now-blueviolet?style=for-the-badge)](YOUR-VERCEL-LINK)
 ![React](https://img.shields.io/badge/React-18-blue?style=for-the-badge&logo=react)
 ![Vite](https://img.shields.io/badge/Vite-Build-yellow?style=for-the-badge&logo=vite)
-![Status](https://img.shields.io/badge/Status-Live%20Now-success?style=for-the-badge)
+![Groq](https://img.shields.io/badge/AI-Groq-orange?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
+A glassmorphic task manager with **real AI suggestions**, gamified progress and drag-and-drop planning.
 
+🔗 **Live demo:** [YOUR-VERCEL-LINK](YOUR-VERCEL-LINK)
 
- ✨ Overview
+---
 
-AI Todo – Smart Task Manager is a next-generation productivity web app designed to help users organize, prioritize, and complete their daily tasks — with the power of artificial intelligence and an immersive glassmorphic design.
-This project goes beyond a standard to-do list — it blends beautiful aesthetics, modern React development, and interactive experiences to make productivity feel fun and futuristic.
-Built entirely with React 18 and Vite, the app delivers blazing-fast performance and a seamless user experience. In AI Mode, a Groq-powered serverless function reads your current tasks and suggests a planning tip and three concrete next steps you can add in one click (or run it in Demo Mode with built-in samples). Each task completion triggers a confetti celebration, rewarding progress and creating positive reinforcement loops — inspired by gamified UX principles.
-With Dark/Light themes, drag-and-drop reordering, streak tracking, and local data persistence, AI Todo combines functionality and design polish that stands out both in your portfolio and in real-world use.
-Whether you’re a developer looking to showcase front-end skills, a productivity enthusiast wanting an elegant task manager, or a client seeking a polished React app — AI Todo is the perfect example of creativity meeting code.  
+## ✨ Overview
 
-🔗 [👉 Live Demo](https://aqsak-dev99.github.io/Ai-to-do-app/)  
+AI Todo helps you organise, prioritise and finish your daily tasks. In **AI Mode**, a Groq-powered serverless function reads your current task list and suggests a planning tip and three concrete next steps, each addable in one click. **Demo Mode** shows built-in sample suggestions with no network calls.
 
+Every completed task earns XP and a confetti celebration, with streaks to keep you coming back. Dark/light themes, drag-and-drop reordering and local storage make it a polished, everyday tool.
 
-🧩 App Preview:
+---
 
-
-
-
+## 🖼️ Preview
 
 https://github.com/user-attachments/assets/47844cf8-8159-417c-8d6c-21dd03b822e6
 
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="screenshots/ai-suggestions.jpg" alt="AI suggestions" width="100%"><br>
+      <sub><b>AI Mode</b> – a planning tip and three suggested next steps</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="screenshots/ai-suggestion-added.jpg" alt="Adding an AI suggestion" width="100%"><br>
+      <sub><b>One-click add</b> – suggestions go straight into your list</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/a0f89eb8-b107-46a0-b686-b24eabda1cfd" alt="Task list" width="100%"><br>
+      <sub><b>Task list</b> – categories, priorities and progress stats</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="https://github.com/user-attachments/assets/ddc384dc-b4d7-477d-a283-54ca6ec4c471" alt="App view" width="100%"><br>
+      <sub><b>Glassmorphic design</b> – dark and light themes</sub>
+    </td>
+  </tr>
+</table>
 
+---
 
+## 🧭 Table of Contents
 
-
-
-
-
-
-
-ScreenShots:
-
-
-<img width="800" height="450" alt="app ss" src="https://github.com/user-attachments/assets/a0f89eb8-b107-46a0-b686-b24eabda1cfd" />
-
-
-<img width="800" height="450" alt="app ss2" src="https://github.com/user-attachments/assets/ddc384dc-b4d7-477d-a283-54ca6ec4c471" />
-
-
-<img width="800" height="450" alt="app ss3" src="https://github.com/user-attachments/assets/80928989-dc79-4b0f-8888-5594a40c4183" />
-
-
-
-
-
-
-
-
-
-
-
-
-
- 🧭 Table of Contents
 - [Features](#-features)
+- [Demo Mode vs AI Mode](#-demo-mode-vs-ai-mode)
 - [Tech Stack](#-tech-stack)
 - [How to Run Locally](#-how-to-run-locally)
-- [Demo Mode vs AI Mode](#-demo-mode-vs-ai-mode)
-- [Made With](#-made-with)
 
+---
 
+## ⚡ Features
 
- ⚡ Features
- 🌌 Glassmorphic UI with neon gradients for a sleek, modern aesthetic  
- 🌗 Dark/Light Mode Toggle for user preference  
- 🖱 Drag & Drop task reordering using React DnD  
- 🤖 AI Suggestions – a planning tip and 3 next-step tasks generated from your current list, each addable in one click  
- 🔥 Streak & XP System to gamify productivity  
- 🗂 Priority, Category, Due Date for robust task management  
- 🎉 Confetti Celebration on task completion for a rewarding experience  
- 📱 Fully Responsive design for all devices  
- 💾 LocalStorage Persistence to save tasks  
- 💖 Personal Branding with customizable logo in footer  
+- 🤖 **AI suggestions:** a planning tip and 3 next-step tasks generated from your current list, each addable in one click
+- 🔥 **Streaks and XP** to gamify productivity
+- 🎉 **Confetti celebration** when you complete a task
+- 🗂 **Priority, category and due date** for every task
+- 🖱 **Drag-and-drop** reordering with React DnD
+- 🌗 **Dark and light themes**
+- 📱 **Fully responsive** on all devices
+- 💾 **LocalStorage** so your tasks are saved between visits
 
+---
 
+## 🧠 Demo Mode vs AI Mode
 
- 🧰 Tech Stack
- ⚛️ React 18 + Vite — Fast and modern web development  
- 🧩 JSX — Declarative UI components  
- 🧲 React DnD — Drag-and-drop functionality  
- 🎇 Canvas Confetti — Celebration effects  
- 📊 React Circular Progressbar — Dynamic productivity stats  
- 🎨 Pure CSS (Tailwind-free) — Glassmorphism + animations  
- 💾 LocalStorage — Persistent task data  
- 🤖 Groq API (via a Vercel serverless function) — AI-powered suggestions  
+| | Demo Mode | AI Mode |
+|---|---|---|
+| Suggestions | Built-in samples | Generated by a Groq-hosted model from your tasks |
+| Network calls | None | One request to the app's serverless function |
+| API key needed | No | No, the key stays on the server |
 
+**How the AI part is built** (`api/suggest.js`):
+- The browser sends the task list to a Vercel serverless function, which calls the Groq API. The key lives only in Vercel's environment variables, never in the browser.
+- The model is told to reply with JSON only, and the server validates every field (category and priority must be known values) before anything reaches the app.
+- Task text is treated as data, not instructions, and is trimmed to a safe length.
+- A per-visitor rate limit and a 15-second timeout protect the free API quota.
+- Clear error messages when the AI is busy or unavailable, so the app never hangs.
 
+---
 
-💻 How to Run Locally
+## 🧰 Tech Stack
 
--bash
-- Clone the repository
+| Area | Technology |
+|---|---|
+| Frontend | React 18, Vite, JSX, pure CSS (glassmorphism and animations) |
+| AI | Groq API via a Vercel serverless function |
+| Interaction | React DnD, Canvas Confetti, React Circular Progressbar |
+| Storage | Browser LocalStorage |
+| Hosting | Vercel |
+
+---
+
+## 💻 How to Run Locally
+
+```bash
 git clone https://github.com/aqsak-dev99/Ai-to-do-app.git
 cd Ai-to-do-app
-
-- Install dependencies
 npm install
-
-- Start the development server
 npm run dev
+```
 
+Open **http://localhost:5173**. Demo Mode works straight away.
 
-Now open your browser and visit ➡️ **[http://localhost:5173](http://localhost:5173)**
+To use **AI Mode** locally, run the app with the Vercel CLI so the serverless function runs too, and add your own Groq key:
 
+```bash
+vercel env add GROQ_API_KEY
+vercel dev
+```
 
+---
 
- 🧠 Demo Mode vs AI Mode
+## 👩‍💻 Author
 
- 🧩 Demo Mode: Uses built-in sample suggestions, with no network calls
- 🤖 AI Mode: Sends your task list to a small serverless function (`api/suggest.js`), which asks a Groq-hosted model for a planning tip and three new tasks. Visitors don't need an API key: the key lives only in the server's environment variables, never in the browser.
+Made by **Aqsa Khan**: [GitHub](https://github.com/aqsak-dev99) · [LinkedIn](https://www.linkedin.com/in/aqsa-khan-dev/) · [Portfolio](https://aqsa-portfoliio.vercel.app)
 
- How the AI part is built:
- - The model is told to reply with JSON only, and the server validates every field (category and priority must be known values) before anything reaches the app
- - Task text is treated as data, not instructions, and is trimmed to a safe length
- - A per-visitor rate limit and a 15-second timeout protect the free API quota
- - Clear error messages when the AI is busy or unavailable, so the app never hangs
-
- To run AI Mode yourself, deploy to Vercel and add `GROQ_API_KEY` in the project's environment variables. Locally, `vercel dev` runs both the app and the function.
-
-
-
- 🪄 Made With
-
- ⚛️ [React](https://reactjs.org/) – UI Framework
- ⚡ [Vite](https://vitejs.dev/) – Lightning-fast build tool
- 🎉 [Canvas Confetti](https://www.npmjs.com/package/canvas-confetti) – Fun task completion effects
- 💜 Love & Neon – Crafted by [@aqsak-dev99](https://github.com/aqsak-dev99)
-
-
-
-⭐ If you like this project, don’t forget to give it a star on GitHub!
-
-
-
-
-
-
+⭐ If you like this project, give it a star on GitHub!
