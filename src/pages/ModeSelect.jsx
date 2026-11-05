@@ -12,13 +12,13 @@ export default function ModeSelect() {
 
   const startAI = () => {
     localStorage.setItem('mode', 'api');
-    toast.info('Enter OpenAI Key in Settings', { icon: 'Key' });
+    toast.success('AI Mode on: real AI suggestions, no key needed');
     navigate('/app');
   };
 
   return (
     <div className="mode-container">
-      <img src="/Ai-to-do-app/logo/app-icon.png" alt="AI Todo" className="logo-sm mb-6 animate-float" />
+      <img src={`${import.meta.env.BASE_URL}logo/app-icon.png`} alt="AI Todo" className="logo-sm mb-6 animate-float" />
       <h2 style={{ color: '#9C88FF', fontSize: '2rem', marginBottom: '2.5rem', fontWeight: 700 }}>
         Choose Your Mode
       </h2>
@@ -30,7 +30,7 @@ export default function ModeSelect() {
             </svg>
           </div>
           <h3>Demo Mode</h3>
-          <p>Try all features with mock AI</p>
+          <p>Try every feature with built-in sample suggestions</p>
         </div>
         <div onClick={startAI} className="mode-card glass-neon animate-slideUp" style={{ animationDelay: '0.5s' }}>
           <div className="icon">
@@ -40,7 +40,7 @@ export default function ModeSelect() {
             </svg>
           </div>
           <h3>AI Mode</h3>
-          <p>Real OpenAI suggestions</p>
+          <p>Real AI suggestions based on your tasks</p>
         </div>
       </div>
     </div>

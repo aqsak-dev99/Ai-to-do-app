@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { format } from 'date-fns';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-import Settings from './components/Settings';
+import Settings from './components/settings';
 
 const ItemType = 'TODO';
 
@@ -81,7 +81,8 @@ export default function App() {
   const [aiTip, setAiTip] = useState('');
   const [showSettings, setShowSettings] = useState(false);
   const [mode, setMode] = useState(localStorage.getItem('mode') || 'demo');
-  const [apiKey, setApiKey] = useState(localStorage.getItem('apiKey') || '');
+  const [suggestions, setSuggestions] = useState([]);
+  const [aiLoading, setAiLoading] = useState(false);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -91,9 +92,9 @@ export default function App() {
     localStorage.setItem('lastCompletionDate', lastCompletionDate);
     localStorage.setItem('darkMode', isDarkMode);
     localStorage.setItem('mode', mode);
-    localStorage.setItem('apiKey', apiKey);
+    localStorage.removeItem('apiKey'); // old versions stored a user key here
     document.body.classList.toggle('light', !isDarkMode);
-  }, [todos, points, streak, lastCompletionDate, isDarkMode, mode, apiKey]);
+  }, [todos, points, streak, lastCompletionDate, isDarkMode, mode]);
 
   useLayoutEffect(() => {
     inputRef.current?.focus();
@@ -124,6 +125,48 @@ export default function App() {
     setTodos([todo, ...todos]);
     setNewTodo(''); setNote(''); setDueDate('');
     toast.success('Task Added!', { icon: 'Plus' });
+  };
+
+  // Demo Mode: built-in sample suggestions, no network call
+  const DEMO_SUGGESTIONS = [
+    { text: 'Plan tomorrow\'s top 3 tasks', category: 'Personal', priority: 'High' },
+    { text: 'Review notes for 20 minutes', category: 'Study', priority: 'Medium' },
+    { text: 'Clear your inbox to zero', category: 'Work', priority: 'Low' },
+    { text: 'Take a 10-minute walk break', category: 'Personal', priority: 'Low' },
+    { text: 'Break your biggest task into steps', category: 'Work', priority: 'High' },
+  ];
+
+  const getSuggestions = async () => {
+    if (mode !== 'api') {
+      const shuffled = [...DEMO_SUGGESTIONS].sort(() => Math.random() - 0.5);
+      setSuggestions(shuffled.slice(0, 3));
+      return;
+    }
+    setAiLoading(true);
+    try {
+      const response = await fetch(`${import.meta.env.VITE_AI_API_URL || ''}/api/suggest`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tasks: todos.map(({ text, completed, category, priority }) => ({ text, completed, category, priority })),
+        }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || 'The AI could not answer this time.');
+      if (data.tip) setAiTip(data.tip);
+      setSuggestions(data.suggestions || []);
+      if (!data.suggestions?.length) toast.info('No new suggestions right now.');
+    } catch (err) {
+      toast.error(err.message === 'Failed to fetch' ? 'Could not reach the AI. Check your connection.' : err.message);
+    } finally {
+      setAiLoading(false);
+    }
+  };
+
+  const addSuggestion = s => {
+    setTodos(prev => [{ id: uuidv4(), text: s.text, note: '', category: s.category, priority: s.priority, dueDate: '', completed: false, isOverdue: false }, ...prev]);
+    setSuggestions(prev => prev.filter(x => x !== s));
+    toast.success('Suggestion added!');
   };
 
   const toggleTodo = id => {
@@ -170,7 +213,7 @@ export default function App() {
         <div className="app-card glass">
           <div className="header">
             <div className="header-left">
-              <img src="/Ai-to-do-app/logo/app-icon.png" alt="AI Todo" className="logo-sm" />
+              <img src={`${import.meta.env.BASE_URL}logo/app-icon.png`} alt="AI Todo" className="logo-sm" />
               <div>
                 <h1>AI Todo</h1>
                 <p style={{ fontSize: '0.8rem', opacity: 0.7 }}>Smart Task Manager</p>
@@ -210,6 +253,21 @@ export default function App() {
           </div>
           <div className="ai-tip">
             {aiTip}
+            <div className="ai-actions">
+              <button onClick={getSuggestions} disabled={aiLoading} className="ai-suggest-btn">
+                {aiLoading ? 'Thinking…' : mode === 'api' ? 'Suggest tasks with AI' : 'Suggest tasks (demo)'}
+              </button>
+            </div>
+            {suggestions.length > 0 && (
+              <ul className="ai-suggestions">
+                {suggestions.map(s => (
+                  <li key={s.text}>
+                    <span>{s.text} <small>· {s.category} · {s.priority}</small></span>
+                    <button onClick={() => addSuggestion(s)} aria-label={`Add ${s.text}`}>Add</button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="input-row">
             <input ref={inputRef} value={newTodo} onChange={e => setNewTodo(e.target.value)} onKeyDown={e => e.key === 'Enter' && addTodo()} placeholder="New task..." />
@@ -237,17 +295,17 @@ export default function App() {
             ))}
           </ul>
           <footer className="footer">
-            <img src="/Ai-to-do-app/logo/logo.png" alt="Aqsa Khan" className="logo-sm" />
+            <img src={`${import.meta.env.BASE_URL}logo/logo.png`} alt="Aqsa Khan" className="logo-sm" />
             <div>
               <p style={{ margin: '0.5rem 0', fontSize: '0.9rem' }}>
                 Made by <strong>Aqsa-dev99</strong>
               </p>
               <div className="footer-links" style={{ fontSize: '0.8rem', opacity: 0.7 }}>
-                <a href="https://github.com/aqsakhan" target="_blank">GitHub</a>
+                <a href="https://github.com/aqsak-dev99" target="_blank" rel="noreferrer">GitHub</a>
                 <span>•</span>
-                <a href="https://linkedin.com/in/aqsakhan" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/aqsa-khan-dev/" target="_blank" rel="noreferrer">LinkedIn</a>
                 <span>•</span>
-                <a href="https://aqsakhan.dev" target="_blank">Portfolio</a>
+                <a href="https://aqsa-portfoliio.vercel.app" target="_blank" rel="noreferrer">Portfolio</a>
               </div>
             </div>
           </footer>
@@ -258,8 +316,6 @@ export default function App() {
             toggleDarkMode={() => setIsDarkMode(!isDarkMode)}
             mode={mode}
             setMode={setMode}
-            apiKey={apiKey}
-            setApiKey={setApiKey}
             clearAllTodos={() => { setTodos([]); toast.success('All tasks cleared!'); }}
             onClose={() => setShowSettings(false)}
           />

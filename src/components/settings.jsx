@@ -1,6 +1,6 @@
 // src/components/Settings.jsx
 export default function Settings({
-  isDarkMode, toggleDarkMode, mode, setMode, apiKey, setApiKey,
+  isDarkMode, toggleDarkMode, mode, setMode,
   clearAllTodos, onClose
 }) {
   return (
@@ -60,35 +60,11 @@ export default function Settings({
           </select>
         </div>
 
-        {/* API Key Input */}
         {mode === 'api' && (
-          <div className="mb-5">
-            <label className="block mb-2 font-medium text-sm">OpenAI API Key</label>
-            <input
-              type="password"
-              value={apiKey}
-              onChange={e => setApiKey(e.target.value)}
-              placeholder="sk-..."
-              className="w-full"
-              style={{
-                padding: '0.9rem',
-                border: '1px solid rgba(255, 255, 255, 0.2)',
-                background: 'rgba(255, 255, 255, 0.1)',
-                color: '#e0e7ff',
-                fontSize: '0.95rem',
-                borderRadius: '12px',
-                transition: 'all 0.3s ease',
-              }}
-              onFocus={e => {
-                e.target.style.borderColor = '#9c88ff';
-                e.target.style.boxShadow = '0 0 15px rgba(156, 136, 255, 0.4)';
-              }}
-              onBlur={e => {
-                e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
-                e.target.style.boxShadow = 'none';
-              }}
-            />
-          </div>
+          <p className="mb-5" style={{ fontSize: '0.85rem', opacity: 0.8, lineHeight: 1.5 }}>
+            AI Mode sends your task list to the app's server, which asks an AI model for
+            suggestions. No API key is needed and nothing is stored on the server.
+          </p>
         )}
 
         {/* Buttons */}

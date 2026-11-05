@@ -478,3 +478,25 @@ body.light {
     grid-template-columns: 1fr;
   }
 }
+/* AI suggestions */
+.ai-actions { margin-top: 0.9rem; display: flex; justify-content: center; }
+.ai-suggest-btn {
+  padding: 0.65rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(156, 136, 255, 0.6);
+  background: rgba(156, 136, 255, 0.18);
+  color: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ai-suggest-btn:disabled { opacity: 0.6; cursor: wait; }
+.ai-suggestions { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.5rem; text-align: left; }
+.ai-suggestions li {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.8rem;
+  padding: 0.6rem 0.8rem; border-radius: 12px; background: rgba(255, 255, 255, 0.08);
+}
+.ai-suggestions small { opacity: 0.7; }
+.ai-suggestions button {
+  flex-shrink: 0; padding: 0.4rem 0.9rem; border-radius: 10px; border: none;
+  background: #9C88FF; color: #fff; font-weight: 600; cursor: pointer;
+}

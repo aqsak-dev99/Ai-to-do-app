@@ -12,7 +12,7 @@
 
 AI Todo – Smart Task Manager is a next-generation productivity web app designed to help users organize, prioritize, and complete their daily tasks — with the power of artificial intelligence and an immersive glassmorphic design.
 This project goes beyond a standard to-do list — it blends beautiful aesthetics, modern React development, and interactive experiences to make productivity feel fun and futuristic.
-Built entirely with React 18 and Vite, the app delivers blazing-fast performance and a seamless user experience. Its AI engine can generate intelligent task suggestions and planning tips (or run in Demo Mode for offline use). Each task completion triggers a confetti celebration, rewarding progress and creating positive reinforcement loops — inspired by gamified UX principles.
+Built entirely with React 18 and Vite, the app delivers blazing-fast performance and a seamless user experience. In AI Mode, a Groq-powered serverless function reads your current tasks and suggests a planning tip and three concrete next steps you can add in one click (or run it in Demo Mode with built-in samples). Each task completion triggers a confetti celebration, rewarding progress and creating positive reinforcement loops — inspired by gamified UX principles.
 With Dark/Light themes, drag-and-drop reordering, streak tracking, and local data persistence, AI Todo combines functionality and design polish that stands out both in your portfolio and in real-world use.
 Whether you’re a developer looking to showcase front-end skills, a productivity enthusiast wanting an elegant task manager, or a client seeking a polished React app — AI Todo is the perfect example of creativity meeting code.  
 
@@ -72,7 +72,7 @@ ScreenShots:
  🌌 Glassmorphic UI with neon gradients for a sleek, modern aesthetic  
  🌗 Dark/Light Mode Toggle for user preference  
  🖱 Drag & Drop task reordering using React DnD  
- 🤖 AI Suggestions – Demo mode or real OpenAI integration via API key  
+ 🤖 AI Suggestions – a planning tip and 3 next-step tasks generated from your current list, each addable in one click  
  🔥 Streak & XP System to gamify productivity  
  🗂 Priority, Category, Due Date for robust task management  
  🎉 Confetti Celebration on task completion for a rewarding experience  
@@ -90,7 +90,7 @@ ScreenShots:
  📊 React Circular Progressbar — Dynamic productivity stats  
  🎨 Pure CSS (Tailwind-free) — Glassmorphism + animations  
  💾 LocalStorage — Persistent task data  
- 🤖 OpenAI API (optional) — AI-powered suggestions  
+ 🤖 Groq API (via a Vercel serverless function) — AI-powered suggestions  
 
 
 
@@ -114,9 +114,16 @@ Now open your browser and visit ➡️ **[http://localhost:5173](http://localhos
 
  🧠 Demo Mode vs AI Mode
 
- 🧩 Demo Mode: Uses pre-written AI suggestions (no API key required)
- 🔑 AI Mode: Add your OpenAI API key in the Settings Menu for live AI responses
-  Get your API key from 👉 [platform.openai.com](https://platform.openai.com/)
+ 🧩 Demo Mode: Uses built-in sample suggestions, with no network calls
+ 🤖 AI Mode: Sends your task list to a small serverless function (`api/suggest.js`), which asks a Groq-hosted model for a planning tip and three new tasks. Visitors don't need an API key: the key lives only in the server's environment variables, never in the browser.
+
+ How the AI part is built:
+ - The model is told to reply with JSON only, and the server validates every field (category and priority must be known values) before anything reaches the app
+ - Task text is treated as data, not instructions, and is trimmed to a safe length
+ - A per-visitor rate limit and a 15-second timeout protect the free API quota
+ - Clear error messages when the AI is busy or unavailable, so the app never hangs
+
+ To run AI Mode yourself, deploy to Vercel and add `GROQ_API_KEY` in the project's environment variables. Locally, `vercel dev` runs both the app and the function.
 
 
 
